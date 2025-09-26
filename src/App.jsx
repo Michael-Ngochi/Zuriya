@@ -7,6 +7,7 @@ import { Routes, Route } from 'react-router-dom'
 import routes from './routes'
 import Navbar from './components/Navbar'
 import Footer from './components/footer'
+import { Toaster } from "sonner";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -29,6 +30,8 @@ function App() {
   return (
     <>
       <Navbar />
+            <Toaster position="top-center" richColors />
+
       <Routes>
         {routes.map(({ path, element }, i) => (
           <Route key={i} path={path} element={element} />

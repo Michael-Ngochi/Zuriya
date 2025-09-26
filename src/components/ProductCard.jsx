@@ -1,14 +1,27 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Button } from "./ui/button";
+import AddToCartButton from "./AddToCartButton";
+import { useState } from "react";
+import { products } from "@/data";
 
 const ProductCard = ({
+    productId="product id",
     productName="Product Name",
     description="Product Description",
     price=500,
     size="product size",
 slug="radiance-serum"}
     ) => {
+
+    {/*find product for add to cart*/}
+    const product = products.find((p) => p.id === productId);
+
+    if (!product) {
+        return <p className="m-6 text-red-600">Sorry, product not found.</p>;
+      } 
+
+
     return(
         <>
          <div className="border-2 border-primary rounded-2xl w-90 m-4 overflow-clip">
@@ -22,10 +35,10 @@ slug="radiance-serum"}
             <h2 className="hover:text-primary hover:underline text-2xl font-serif">{productName}</h2>
             <p className="text-muted-foreground">{description}</p>
             <span>{size}</span> <br />
-            <span className="text-xl">Ksh {price}</span>
+            <span className="text-xl font-serif">Ksh {price}</span>
             </NavLink>
             <div className="flex gap-3 flex-row ">
-            <Button className=" my-2 px-3 bg-primary font-bold text-primary-foreground">Add to Cart</Button>
+            <AddToCartButton item={product} type="product"/>
             <NavLink to={`/products/${slug}`}><Button variant="link" className=" my-2 px-3 text-accent-foreground">Learn more</Button></NavLink>
             </div>
             </div>

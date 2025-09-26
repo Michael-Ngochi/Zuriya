@@ -2,6 +2,8 @@ import Home from '@/pages/Home'
 import About from '@/pages/About'
 import Products from './pages/Products'
 import IndividualProduct from './pages/IndividualProduct'
+import Rituals from './pages/Rituals'
+import Contact from './pages/Contact'
 
 
 // import NotFound from '@/pages/NotFound'
@@ -10,6 +12,8 @@ const routes = [
   { path: '/', element: <Home /> },
   { path: '/about', element: <About /> },
   { path: '/products', element: <Products /> },
+  { path: '/rituals', element: <Rituals /> },
+  { path: '/contact', element: <Contact /> },
   { path: '/products/:slug', element: <IndividualProduct /> },
 
 //   { path: '*', element: <NotFound /> },

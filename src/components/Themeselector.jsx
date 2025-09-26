@@ -13,9 +13,9 @@ const Themeselector = () => {
   }
 
   const getIcon = () => {
-    if (theme === "light") return <MdLightMode  size={20} />
+    if (theme === "light") return <MdLightMode  className="text-primary" size={20} />
     if (theme === "dark") return <MdDarkMode className="text-primary" size={20} />
-    return <MdComputer size={20} />
+    return <MdComputer className="text-primary" size={20} />
   }
 
   return (

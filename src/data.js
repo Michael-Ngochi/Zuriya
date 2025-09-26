@@ -122,7 +122,7 @@ export const bundles = [
 export const ritualBundles = [
   {
     id: "r1",
-    name: "Morning Glow Ritual",
+    name: "Morning Glow Bundle",
     tagline: "Start your day with clarity and protection.",
     price: 7800,
     shortDescription: "Cleanser, serum, and SPF for a radiant morning routine.",
@@ -134,7 +134,7 @@ export const ritualBundles = [
   },
   {
     id: "r2",
-    name: "Evening Repair Ritual",
+    name: "Evening Repair Bundle",
     tagline: "Reset and restore overnight.",
     price: 9200,
     shortDescription: "Cleanse, hydrate, and refresh for healthy evening repair.",
@@ -146,7 +146,7 @@ export const ritualBundles = [
   },
   {
     id: "r3",
-    name: "Hydration Boost Ritual",
+    name: "Hydration Boost Bundle",
     tagline: "Anytime skin refresh.",
     price: 5200,
     shortDescription: "A weekend or midday duo for deep hydration.",
@@ -169,4 +169,69 @@ export const ritualBundles = [
     recommendedOn: "all"
   }
 ];
+
+
+export const ritualsContent = [
+  {
+    id: "r1",
+    name: "Morning Glow Ritual",
+    description:
+      "Awaken your senses with a refreshing three-step ritual designed to brighten and protect. The Morning Glow Ritual blends gentle cleansing with a boost of radiance and lightweight sun protection. Perfect for busy mornings, it sets the tone for a day where your skin feels fresh, glowing, and shielded from the elements.",
+    steps: [
+      "Cleanse. Begin with the Purifying Gel Cleanser to wash away overnight buildup, leaving your skin balanced and clear.",
+      "Brighten. Apply 3–4 drops of the Radiance Serum while skin is still slightly damp for deeper absorption and glow.",
+      "Protect. Finish with SunShield SPF30, a weightless shield against UV rays that keeps your skin safe all day."
+    ],
+    proTip:
+      "Massage the cleanser for 60 seconds to activate the botanicals and boost circulation.",
+    price: 7800,
+    cta: "Shop Morning Ritual →"
+  },
+  {
+    id: "r2",
+    name: "Evening Repair Ritual",
+    description:
+      "Unwind at the end of the day with a four-step ritual crafted to restore balance and nourish deeply. The Evening Repair Ritual works overnight, layering hydration and renewal to repair daily stress. Wake up to skin that feels replenished, calm, and naturally radiant.",
+    steps: [
+      "Cleanse. Melt away makeup and impurities with the Purifying Gel Cleanser.",
+      "Repair. Press in the Radiance Serum to support skin renewal and even tone.",
+      "Hydrate. Smooth on Hydrate+ Cream to lock in nourishment overnight.",
+      "Refresh. Mist with the Refresh Mist before bed for calming hydration that seals your routine."
+    ],
+    proTip:
+      "Layer mist → serum → cream to maximize absorption and strengthen your barrier.",
+    price: 9200,
+    cta: "Shop Evening Ritual →"
+  },
+  {
+    id: "r3",
+    name: "Hydration Boost Ritual",
+    description:
+      "For moments when your skin craves an instant reset, the Hydration Boost Ritual delivers comfort in two simple steps. Whether it’s after a workout, during a long day, or while traveling, this ritual provides a surge of moisture that leaves skin soft, plump, and refreshed.",
+    steps: [
+      "Refresh — Spritz the Refresh Mist whenever your skin feels tight, dull, or fatigued.",
+      "Deep Hydrate — Seal in moisture with Hydrate+ Cream for a smooth, dewy finish."
+    ],
+    proTip:
+      "Keep the mist in your bag for on-the-go hydration throughout the day.",
+    price: 5200,
+    cta: "Shop Hydration Ritual →"
+  },
+  {
+    id: "r4",
+    name: "Complete Ritual Collection",
+    description:
+      "Experience the full Zuriya journey with all five essentials in one collection. From your first morning cleanse to your evening hydration boost, the Complete Ritual Collection ensures every step of your routine is intentional, plant-powered, and nourishing.",
+    steps: [
+      "Morning: Cleanse → Serum → SPF",
+      "Evening: Cleanse → Serum → Mist → Cream",
+      "Anytime: Mist + Cream for hydration boost"
+    ],
+    proTip:
+      "Alternate between misting and layering cream to adjust hydration levels based on your skin’s needs.",
+    price: 12900,
+    cta: "Shop Complete Ritual →"
+  }
+];
+
 

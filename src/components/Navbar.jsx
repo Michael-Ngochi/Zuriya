@@ -3,7 +3,7 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger,SheetTitle } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import logo from "@/assets/logo.svg";
 import Themeselector from "./Themeselector";
@@ -11,6 +11,7 @@ import { FaShoppingBasket } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { motion, useAnimation, useScroll } from "framer-motion";
 import { Link, NavLink } from "react-router-dom";
+import Cart from "./Cart";
 
 function Navbar() {
   const controls = useAnimation();
@@ -33,7 +34,7 @@ function Navbar() {
     { to: "/about", label: "ABOUT" },
     { to: "/products", label: "PRODUCTS" },
     { to: "/rituals", label: "RITUALS" },
-    { to: "/stories", label: "STORIES" },
+    // { to: "/stories", label: "STORIES" },
     { to: "/contact", label: "CONTACT" },
   ];
 
@@ -82,8 +83,20 @@ function Navbar() {
           {/* Right Side: Cart + Theme Toggle + Hamburger */}
           <div className="flex items-center gap-4">
             <Themeselector />
-            <FaShoppingBasket className="text-xl cursor-pointer text-primary" />
 
+            {/* shopping cart sheet */}
+            <Sheet>
+            <SheetTrigger>
+              <SheetTitle className="hidden">shopping cart</SheetTitle>
+              <FaShoppingBasket className="text-xl cursor-pointer text-primary" />
+              </SheetTrigger>
+              <SheetContent side="right" className="p-6 space-y-6">
+                <Cart />
+              </SheetContent>
+             </Sheet>
+
+
+            {/* Mobile Menu */}
             <Sheet>
               <SheetTrigger className="md:hidden p-2 rounded hover:bg-gray-100">
                 <Menu className="h-6 w-6" />
@@ -98,7 +111,7 @@ function Navbar() {
                       key={to}
                       to={to}
                       className={({ isActive }) =>
-                        isActive ? "text-primary font-semibold" : "hover:underline"
+                        isActive ? "text-primary font-semibold underline" : "hover:underline"
                       }
                     >
                       {label}
@@ -106,10 +119,7 @@ function Navbar() {
                   ))}
                 </nav>
 
-                <div className="flex items-center gap-4 pt-4 border-t">
-                  <Themeselector />
-                  <FaShoppingBasket className="text-xl cursor-pointer" />
-                </div>
+                
               </SheetContent>
             </Sheet>
           </div>

@@ -5,10 +5,12 @@ import App from './App.jsx'
 import { Provider } from "react-redux"
 import { store } from "@/store"
 import { BrowserRouter} from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 
 
 
 createRoot(document.getElementById('root')).render(
+<HelmetProvider>
 <BrowserRouter>
 <Provider store={store}>
   <StrictMode>
@@ -16,4 +18,5 @@ createRoot(document.getElementById('root')).render(
   </StrictMode>
   </Provider>
 </BrowserRouter>
+</HelmetProvider>
 )

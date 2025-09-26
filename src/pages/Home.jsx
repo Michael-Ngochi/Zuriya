@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
+import{ Helmet } from "react-helmet-async";
 import img11 from "../../public/images/img11.png";
 import { motion } from "framer-motion";
 import {
@@ -25,6 +26,13 @@ import Labeledimage from "@/components/Labeledimage";
 function Home() {
   return (
     <>
+<Helmet>
+    <title>Home | Zuriya</title>
+    <meta name="description" content="Welcome to Zuriya, where beauty begins with plant-powered skincare crafted with elegance and intention. Discover rituals that celebrate your natural glow." />
+    <link rel="canonical" href="/" />
+</Helmet>
+
+
 <div
       className="h-screen bg-cover bg-center bg-no-repeat"
       style={{
