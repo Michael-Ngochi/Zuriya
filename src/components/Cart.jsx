@@ -48,7 +48,7 @@ const Cart = () => {
             {/* Item info */}
             <div className="flex flex-col items-center gap-4">
               <img
-                src="https://placehold.co/100"
+                src={item.image}
                 alt={item.name}
                 className="  rounded-lg shadow"
               />

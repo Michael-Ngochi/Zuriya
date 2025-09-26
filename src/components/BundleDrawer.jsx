@@ -2,6 +2,7 @@ import {React, useState} from "react";
 import {ritualBundles} from "@/data";
 import { Button } from "./ui/button";
 import AddToCartButton from "./AddToCartButton";
+import { NavLink } from "react-router-dom";
 const BundleDrawer =()=>{
     const [bundles, setBundles] = useState(ritualBundles);
     return(
@@ -20,7 +21,7 @@ const BundleDrawer =()=>{
                 <span className="text-xl font-serif">Ksh {bundle.price}</span>
                 <div className="flex gap-3 flex-row ">
                 <AddToCartButton item={bundle} type="bundle"/>
-                <Button variant="link" className=" my-2 px-3 text-accent-foreground">Learn more</Button>
+                <NavLink to={`/rituals#${bundle.id}`} ><Button variant="link" className=" my-2 px-3 text-accent-foreground">Learn more</Button></NavLink>
                 </div>
                 </div>
             </div>

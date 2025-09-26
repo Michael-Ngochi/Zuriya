@@ -2,11 +2,11 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { Button } from "./ui/button";
 import AddToCartButton from "./AddToCartButton";
-import { useState } from "react";
 import { products } from "@/data";
 
 const ProductCard = ({
     productId="product id",
+    productIamge,
     productName="Product Name",
     description="Product Description",
     price=500,
@@ -24,10 +24,10 @@ slug="radiance-serum"}
 
     return(
         <>
-         <div className="border-2 border-primary rounded-2xl w-90 m-4 overflow-clip">
+         <div className="border-2 bg-white border-primary rounded-2xl w-90 m-4 overflow-clip">
             <div className="overflow-clip">
             <NavLink to={`/products/${slug}`} >
-            <img className="transition-transform duration-300 ease-in-out hover:scale-110" src="https://placehold.co/600" alt="" />
+            <img className="transition-transform duration-300 ease-in-out hover:scale-110" src={productIamge} alt="" />
             </NavLink>
             </div>
             <div className="flex flex-col bg-card text-card-foreground px-2 pt-2">

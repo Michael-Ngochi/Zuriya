@@ -96,11 +96,11 @@ const Contact = () => {
   transition={{ repeat: Infinity, duration: 2 }}
   className="flex flex-col items-center justify-center text-lg font-medium w-auto mx-auto space-y-2"
 >
-  <span>Want a website like this?</span>
+  <span id="links">Want a website like this?</span>
   <MdKeyboardDoubleArrowDown className="text-primary text-2xl" />
 </motion.div>
 
-          <div id="links" className="flex md:flex-row gap-6 justify-center text-3xl">
+          <div  className="flex md:flex-row gap-6 justify-center text-3xl">
             <motion.a
               whileHover={{ scale: 1.2 }}
               href="https://michael-ngochi.github.io/portfolio/"

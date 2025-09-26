@@ -1,4 +1,5 @@
-import { React, useState, useRef } from "react";
+import { React, useState, useRef,useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import ritualsHero from "../../public/images/ritualsHero.png";
 import { ritualBundles, ritualsContent } from "@/data";
@@ -24,6 +25,25 @@ import AddToCartButton from "@/components/AddToCartButton";
 
 const Rituals = () => {
   const [bundle, setBundle] = useState(ritualBundles[0]);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      // Use setTimeout to ensure element is rendered
+      setTimeout(() => {
+        const id = location.hash.replace("#", "");
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 0); // or a slightly higher delay like 100ms if needed
+    }
+  }, [location]);
+
+
+
+
 
   const handleBundleChange = (id) => {
     const selectedBundle = ritualBundles.find((bundle) => bundle.id === id);
@@ -110,6 +130,7 @@ const Rituals = () => {
           return (
             <motion.div
               key={ritual.id}
+              id={ritual.id}
               ref={ritualRef}
               style={index % 2 === 0 ? { direction: "ltr" } : { direction: "rtl" }}
               className="flex-col md:grid grid-cols-2 gap-4 items-center justify-between text-center lg:px-50 px-5 my-10"
@@ -129,7 +150,7 @@ const Rituals = () => {
                 variants={fadeInUp}
               >
                 <motion.h2
-                  className="text-3xl font-serif my-2"
+                className="text-3xl font-serif my-2"
                   variants={fadeInUp}
                 >
                   {ritual.name}

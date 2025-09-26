@@ -160,7 +160,7 @@ function Home() {
 
 {/* Closing section with CTA */}
 <div>
-  <Card className="my-10 mx-3 bg-muted bg-card">
+  <Card className="my-10 mx-3 bg-card">
       <CardHeader className="mx-5 md:mx-50 mt-4 px-6 pt-6 border-primary border-2">
         <CardTitle className="text-3xl font-bold text-center">Ready to elevate your skincare ritual?</CardTitle>
         <CardDescription className="text-center mb-4">Discover the balance between elegance and nature. Start your journey with Zuriya today.</CardDescription>

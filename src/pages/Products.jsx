@@ -51,7 +51,7 @@ const Products = () => {
 {
 productList.map((product)=>{
     return(
-        <ProductCard key={product.id} productId={product.id} productName={product.name} description={product.shortDescription} price={product.price} size={product.size} slug={product.slug} />
+        <ProductCard key={product.id} productId={product.id} productName={product.name} description={product.shortDescription} price={product.price} size={product.size} slug={product.slug} productIamge={product.image} />
     )
 })
 }
